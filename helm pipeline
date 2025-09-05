@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE = "koti02/springboot-app:1.0"
-        DOCKER_HUB_CREDS = "docker-preeti" 
+        DOCKER_HUB_CREDS = "docker-koti" 
         KUBE_NAMESPACE = "springboot-app"
         HELM_RELEASE = "springboot-release"
         HELM_CHART_PATH = "helm-chart"
@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git credentialsId: 'git-preeti', url: 'https://github.com/koti02/Springboot-Application.git', branch: 'main'
+                git credentialsId: 'git-koteswararao', url: 'https://github.com/gk020601/helm', branch: 'main'
             }
         }
 
